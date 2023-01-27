@@ -5,7 +5,7 @@ For queries, contact helpdesk.landsaf@ipma.pt
 Check this <a href="https://gitlab.com/helpdesk.landsaf/lsasaf_data_access" target="_blank">git repository</a> for tips to access the data. 
 
 The recomended way to download several products is with the [**wget**](https://www.gnu.org/software/wget/ 
-) tool which is available in most linux distributions. For windows details will be included
+) tool which is available in most linux distributions. Windows binaries can be found [here](https://eternallybored.org/misc/wget/)
 
 For example to download MSG LST hourly files (skipping minutes 15, 30, 45) for Jan 2006 you can use the following command (don’t forget the last “/” to download only that period) (replace --user=XXX --password=XXX by your access credentials):
 ```
