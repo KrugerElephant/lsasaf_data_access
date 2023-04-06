@@ -2,7 +2,7 @@ Welcome to the **LSA SAF data service**.
 
 For queries, contact helpdesk.landsaf@ipma.pt 
 
-Check this <a href="https://gitlab.com/helpdesk.landsaf/lsasaf_data_access" target="_blank">git repository</a> for tips to access the data. 
+Check the <a href="https://gitlab.com/helpdesk.landsaf/lsasaf_data_access/-/wikis/home" target="_blank">data service user guide</a> for tips to access the data. 
 
 The recomended way to download several products is with the [**wget**](https://www.gnu.org/software/wget/ 
 ) tool which is available in most linux distributions. Windows binaries can be found [here](https://eternallybored.org/misc/wget/)
@@ -71,6 +71,7 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <tr> <td>ETFAPAR</td> <td>10-day Fraction of Absorved Photosynthetic Active Radiation</td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   <tr> <td>ETFVC</td> <td>10-day Fraction of Vegetation Cover</td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   <tr> <td>ETLAI</td> <td>10-day Leaf Area Index</td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
+  <tr> <td>ENDVI10</td> <td>10-daily synthesis Normalized Difference Vegetation Index</td> <td>EPS</td> <td>ENVI</td> </tr>
 
   <tr> <td colspan="4"><b>Radiation fluxes</b></td> </tr>
   <tr> <td>MDIDSLF</td> <td>Daily Downward Surface Longwave Flux</td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
