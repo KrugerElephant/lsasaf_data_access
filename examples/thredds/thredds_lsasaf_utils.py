@@ -8,7 +8,7 @@ import xarray as xr
 
 from tqdm import tqdm # only for the nice progress bar
 
-def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox):
+def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLonPoint=None):
     """
     Function to load time series of a given product for a given domain"
     Inputs:
@@ -17,13 +17,24 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox):
     
     """
     
-    # List with Lon/Lat slices to be used by xarray to cut domain
-    if "MSG" in product.path or "MSG-IODC" in product.path:
-        LatLonSlice = [ slice(LatLonBox[0],LatLonBox[1]),
-                        slice(LatLonBox[3],LatLonBox[2])] ## swapped for MSG
-    else:
-        LatLonSlice = [ slice(LatLonBox[0],LatLonBox[1]),
-                        slice(LatLonBox[2],LatLonBox[3])] ## swapped for MSG
+    Box=False
+    Point=False
+    if LatLonBox is not None and LatLonPoint is None:
+        # List with Lon/Lat slices to be used by xarray to cut domain
+        Box=True
+        if "MSG" in product.path or "MSG-IODC" in product.path:
+            LatLonSlice = [ slice(LatLonBox[1],LatLonBox[0]), ## swapped for MSG
+                            slice(LatLonBox[2],LatLonBox[3])] 
+        else:
+            LatLonSlice = [ slice(LatLonBox[0],LatLonBox[1]),
+                            slice(LatLonBox[2],LatLonBox[3])] 
+    
+    if LatLonBox is None and LatLonPoint is not None:
+        Point=True
+    
+    if not Box and not Point:
+        print("Must provide LatLonBox or LatLonPoint")
+        return None
     
     tstart=time.time()
     ds_tmp=[] # temporary list to store datasets before concatenation
@@ -40,7 +51,10 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox):
             continue
         try:
             # cut domain and select variables 
-            xtmp=ds.sel(lon=LatLonSlice[0],lat=LatLonSlice[1])[NcvarsLoad]
+            if Box:
+                xtmp=ds.sel(lat=LatLonSlice[0],lon=LatLonSlice[1])[NcvarsLoad]
+            elif Point:
+                xtmp=ds.sel(lat=LatLonPoint[0],lon=LatLonPoint[1],method='nearest')[NcvarsLoad]
             xtmp.load() # force load of data at this stage 
             ds_tmp.append(xtmp)
         except:
