@@ -16,7 +16,6 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLon
     Returns:
     
     """
-    
     Box=False
     Point=False
     if LatLonBox is not None and LatLonPoint is None:
@@ -35,7 +34,6 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLon
     if not Box and not Point:
         print("Must provide LatLonBox or LatLonPoint")
         return None
-    
     tstart=time.time()
     ds_tmp=[] # temporary list to store datasets before concatenation
     slots_miss=[] # list to store missing files
@@ -46,8 +44,9 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLon
         # try to open with xarray as dataset
         try:
             ds = xr.open_dataset(furl)
-        except:
+        except Exception as e:
             slots_miss.append(slot)
+            print(e)
             continue
         try:
             # cut domain and select variables 
@@ -69,7 +68,6 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLon
         print(f"Loaded {len(slot_list)-len(slots_miss)} out of "
               f"{len(slot_list)} slots with dims: {ds_full.dims} "
               f"in {time.time()-tstart:.2f} seconds ")
-        #display(ds_full)
         return ds_full
     else:
         print(f"Could not load any slot !")
@@ -133,7 +131,10 @@ class lsa_product:
                   If check is True and file can be opened, returns full file URL
                   If check is True and file cannot be opened, return None
         """
-        full_url = f"https://{self.user}:{self.passwd}@{self.server}/{file_url}"
+        if self.server is None:
+            full_url = file_url
+        else:
+            full_url = f"https://{self.user}:{self.passwd}@{self.server}/{file_url}"
         
         if check:
             try:
