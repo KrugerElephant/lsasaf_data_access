@@ -69,7 +69,7 @@ def load_product_slots_domain(product,slot_list,NcvarsLoad,LatLonBox=None,LatLon
         print(f"Loaded {len(slot_list)-len(slots_miss)} out of "
               f"{len(slot_list)} slots with dims: {ds_full.dims} "
               f"in {time.time()-tstart:.2f} seconds ")
-        display(ds_full)
+        #display(ds_full)
         return ds_full
     else:
         print(f"Could not load any slot !")
