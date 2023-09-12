@@ -12,7 +12,7 @@ For queries, contact helpdesk.landsaf@ipma.pt
 
 Access to the files in the data archive is restricted to registered users.<br>
 <b><a href="https://mokey.lsasvcs.ipma.pt/auth/signup" target="_blank">Register here</a></b> / 
-<b><a href="https://mokey.lsasvcs.ipma.pt/auth/forgotpw" target="_blank">Resest password</a></b>
+<b><a href="https://mokey.lsasvcs.ipma.pt/auth/forgotpw" target="_blank">Reset password</a></b>
 
 <b><a href="https://gitlab.com/helpdesk.landsaf/lsasaf_data_access/-/wikis/home" target="_blank">Data Service User Guide</a></b>
 
