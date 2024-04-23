@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-<img src="https://landsaf.ipma.pt/static/logo.png">
+<img src="https://lsa-saf.eumetsat.int/static/logo.png">
 </div>
 
  
@@ -93,7 +93,7 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
 
 
 <a name="product"></a>
-### Products acronyms
+### Products acronyms and organization
 
 <table>
   <tr>
@@ -107,31 +107,60 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <a href="https://landsaf.ipma.pt/en/data/products/land-surface-temperature-and-emissivity/" target="_blank">Land Surface temperature and emissivity </a></b></td> </tr>
   
   <tr> <td>MLST</td><td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/Dd6ga76oG7Lqz5Q" target="_blank">Land Surface Temperature</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/Dd6ga76oG7Lqz5Q" target="_blank">Land Surface Temperature</a> [15 min]
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MLST_DIR</td> <td>[LSA-004]</td> <td>2021-NRT</td> </tr>
+  <tr> <td>MLST</td> <td>[LSA-001]</td> <td>2016-2021</td> </tr>
+  <tr> <td>MLST-R</td> <td>[LSA-050]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MLST-AS</td><td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/dYjdyiMXZTt8sP4" target="_blank">Land Surface Temperature - All Sky</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/dYjdyiMXZTt8sP4" target="_blank">Land Surface Temperature - All Sky</a>  [30 min]   
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MLST-AS</td> <td>[LSA-005]</td> <td>2020-NRT</td> </tr>
+  </table>
   </td><td>MSG</td><td>HDF5, NETCDF</td>
 
   <tr> <td>MLST-ASv2</td><td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/DSnWj8n4gx3WQbm" target="_blank">Land Surface Temperature - All Sky version 2</a>
+  [30 min] 
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MLST-ASv2</td> <td>[LSA-005.2]</td> <td>2004-NRT</td> </tr>
+  </table>
   </td><td>MSG</td><td>HDF5, NETCDF</td>
   
   <tr> <td>DLST</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/yniroZGomKkDeXR" target="_blank">Derived LST: 10-day composites</a>
-  </td><td>MSG</td> <td>HDF5, NETCDF</td> </tr>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/yniroZGomKkDeXR" target="_blank">Derived LST: 10-day composites</a> 
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>DLST</td> <td>[LSA-003]</td> <td>2015-NRT</td> </tr>
+  </table>
+  </td><td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>EDLST</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/NsW275gpDAfekzc" target="_blank">Daily Land Surface Temperature</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/NsW275gpDAfekzc" target="_blank">Daily Land Surface Temperature</a> [day/night] 
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> EPS products info </td> </tr>
+  <tr> <td>EDLST</td> <td>[LSA-002]</td> <td>2015-NRT</td> </tr>
+  </table>
   </td><td>EPS</td><td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MEM</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/Dd6ga76oG7Lqz5Q" target="_blank">Daily Land Surface Emissivity</a>
+  <br> MEM [DEMO] 2004-NRT 
   </td><td>MSG,MSG-IODC</td><td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MEMD</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/kxo9bs8QKGtytA3" target="_blank">Direct Emissivity Retrieval</a>
+  [daily] <br> MEMD [LSA-006] 2004-NRT 
   </td><td>MSG</td><td>HDF5, NETCDF</td> </tr>
   
 
@@ -139,15 +168,32 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <a href="https://landsaf.ipma.pt/en/data/products/fire-products/" target="_blank">Wild Fires</a></b></td> </tr>
   
   <tr> <td>FRP-GRID</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/TjpsBziZFNN6GPN" target="_blank">Fire Radiative Power Gridded</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/TjpsBziZFNN6GPN" target="_blank">Fire Radiative Power Gridded</a> [hourly]
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>FRPGrid</td> <td>[LSA-503]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>FRPGrid-R</td> <td>[LSA-551]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5</td> </tr>
   
   <tr> <td>FRP-PIXEL</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/TjpsBziZFNN6GPN" target="_blank">Fire Radiative Power Pixel</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/TjpsBziZFNN6GPN" target="_blank">Fire Radiative Power Pixel</a> [15 min]
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>FRPPixel</td> <td>[LSA-502]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>FRPPixel-R</td> <td>[LSA-550]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5</td> </tr>
   
   <tr> <td>FRMv2</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/CjtrxjMcYBz5wT7" target="_blank">Fire Risk Map version 2</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/CjtrxjMcYBz5wT7" target="_blank">Fire Risk Map version 2</a> [daily] 
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>FRMv2</td> <td>[LSA-504.2]</td> <td>2021-NRT</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5</td> </tr>
 
 
@@ -156,22 +202,51 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   
   <tr> <td>MDALv2</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/pApTpM4oaMnPZcM" target="_blank">Daily Surface Albedo version 2</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDALv2</td> <td>[LSA-101.2]</td> <td>2004-NRT</td> </tr>
+  </table>
+  </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
+  
+  
+  <tr> <td>MTALv2</td> <td>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/pApTpM4oaMnPZcM" target="_blank">10-day Surface Albedo version 2</a> [10 daily]
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MTALv2</td> <td>[LSA-102.2]</td> <td>2004-NRT</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MDAL</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/gFgGbMNQ2Gmns63" target="_blank">Daily Surface Albedo</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDAL</td> <td>[LSA-101]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDAL-R</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IOCD</td> <td>HDF5, NETCDF</td> </tr>
-  
-  <tr> <td>MTALv2</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/pApTpM4oaMnPZcM" target="_blank">10-day Surface Albedo version 2</a>
-  </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
-  
+
   <tr> <td>MTAL</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/yWwSJ3ai2a7naHZ" target="_blank">10-day Surface Albedo</a>
+   <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MTAL</td> <td>[LSA-102]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MTAL-R</td> <td>[LSA-150]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
-  
+
+
   <tr> <td>ETAL</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/6D4Q849exZRx3xW" target="_blank">10-day Surface Albedo</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>ETAL</td> <td>[LSA-103]</td> <td>2015-NRT</td> </tr>
+  </table>
   </td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   
   
@@ -180,46 +255,103 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   
   <tr> <td>MDFAPAR</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/LbAmqBTB3Q2tbQP" target="_blank">Daily Fraction of Absorved Photosynthetic Active Radiation</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDFAPAR</td> <td>[LSA-425]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDFAPAR</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MDFVC</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/LbAmqBTB3Q2tbQP" target="_blank">Daily Fraction of Vegetation Cover</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDFVC</td> <td>[LSA-421]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDFVC</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MDLAI</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/LbAmqBTB3Q2tbQP" target="_blank">Daily Leaf Area Index</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDLAI</td> <td>[LSA-423]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDAIL</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MGPP</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/LNkWz498cA4Rf2Z" target="_blank">10-days Gross Primary Production</a>
+  <br> 
+  <table>
+  <tr> <td>MGPP</td> <td>[LSA-411]</td> <td>2018-NRT</td> </tr>
+  </table> 
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MTFAPAR</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/7co5rsXBqwR7kYg" target="_blank">10-day Fraction of Absorved Photosynthetic Active Radiation</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MTFAPAR</td> <td>[LSA-426]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MTFAPAR-R</td> <td>[LSA-452]</td> <td>2004-2015</td> </tr>
+  </table>  
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MTVFC</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/7co5rsXBqwR7kYg" target="_blank">10-day Fraction of Vegetation Cover</a>
+   <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MTFVC</td> <td>[LSA-422]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MTFVC-R</td> <td>[LSA-450]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MTLAI</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/7co5rsXBqwR7kYg" target="_blank">10-day Leaf Area Index</a>
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MTLAI</td> <td>[LSA-424]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MTLAI-R</td> <td>[LSA-451]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>ETFAPAR</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/sWn23j9NZnJg2a6" target="_blank">10-day Fraction of Absorved Photosynthetic Active Radiation</a>
+  <br> 
+  <table>
+  <tr> <td>ETFAPAR</td> <td>[LSA-409]</td> <td>2015-NRT</td> </tr>
+  </table>  
   </td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>ETFVC</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/sWn23j9NZnJg2a6" target="_blank">10-day Fraction of Vegetation Cover</a>
+  <br> 
+  <table>
+  <tr> <td>ETFVC</td> <td>[LSA-403]</td> <td>2015-NRT</td> </tr>
+  </table>
   </td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>ETLAI</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/sWn23j9NZnJg2a6" target="_blank">10-day Leaf Area Index</a>
+  <br> 
+  <table>
+  <tr> <td>ETLAI</td> <td>[LSA-406]</td> <td>2015-NRT</td> </tr>
+  </table>
   </td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>ENDVI10</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/qqwZSwGC6mAHxZA" target="_blank">10-daily synthesis Normalized Difference Vegetation Index</a>
+    <br> 
+  <table>
+  <tr> <td>ENDVI10</td> <td>[LSA-420]</td> <td>2020-NRT</td> </tr>
+  <tr> <td>ENDVI10-R</td> <td>[LSA-454]</td> <td>2007-2019</td> </tr>
+  </table>
   </td> <td>EPS</td> <td>ENVI</td> </tr>
   
 
@@ -227,23 +359,50 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <a href="https://landsaf.ipma.pt/en/data/products/radiation/" target="_blank">Surface Radiation</a></b></td> </tr>
   
   <tr> <td>MDSSFTD</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/bA9gYoa5mQX2yJw" target="_blank">Total and Diffuse Downward Surface Shortwave Flux</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/bA9gYoa5mQX2yJw" target="_blank">Total and Diffuse Downward Surface Shortwave Flux</a> 15 min
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDSSFTD</td> <td>[LSA-207]</td> <td>2004-NRT</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MDSLF</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/m5X9LNMK9oAW55C" target="_blank">Downward Surface Longwave Flux</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/m5X9LNMK9oAW55C" target="_blank">Downward Surface Longwave Flux</a> 30 min
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDSLF</td> <td>[LSA-204]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDSLF</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
 
   <tr> <td>MDIDSLF</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/9BQa6e2CAaJdjRZ" target="_blank">Daily Downward Surface Longwave Flux</a>
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDIDSLF</td> <td>[LSA-206]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>MDIDSLF</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MDIDSSF</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/QSABgnG4dZGBo5W" target="_blank">Daily Downward Surface Shortwave Flux</a>
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MDIDSSF</td> <td>[LSA-203]</td> <td>2004-NRT</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MNSLF</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/z42FQpGPmTxMN6Q" target="_blank">Daily Net Surface Longwave</a>
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MNSLF</td> <td>[LSA-208]</td> <td>2020-NRT</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
 
@@ -251,41 +410,91 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <a href="https://landsaf.ipma.pt/en/data/products/evapotranspiration-turbulent-fluxes/" target="_blank">Evaporation and turbulent fluxes</a></b></td> </tr> <tr> 
   
   <tr> <td>METREF</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/zzBDmfgtJE9ePQW" target="_blank">Reference Evapotranspiration</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/zzBDmfgtJE9ePQW" target="_blank">Reference Evapotranspiration</a> [daily]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>METREF</td> <td>[LSA-303]</td> <td>2016-NRT</td> </tr>
+  <tr> <td>METREF-R</td> <td>[DEMO]</td> <td>2004-2015</td> </tr>
+  </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5, NETCDF</td> </tr>
 
   <tr> <td>MDMETv3</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Daily Evapotranspiration version 3</a>
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>DMETv3</td> <td>[LSA-312.3]</td> <td>2021-NRT</td> </tr>
+  <tr> <td>DMETv3-R</td> <td>[LSA-351]</td> <td>2004-2020</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
 
   <tr> <td>METv3</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Evapotranspiration version 3</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Evapotranspiration version 3</a> [30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>METv3</td> <td>[LSA-311.3]</td> <td>2021-NRT</td> </tr>
+  <tr> <td>METv3-R</td> <td>[LSA-350]</td> <td>2004-2020</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MHv3</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Sensible heat flux version 3</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Sensible heat flux version 3</a> [30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MHv3</td> <td>[LSA-304.3]</td> <td>2021-NRT</td> </tr>
+  <tr> <td>MHv3-R</td> <td>[LSA-352]</td> <td>2004-2020</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MLEv3</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Latent heat flux version 3</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/7QLcZfABg5H6mkq" target="_blank">Latent heat flux version 3</a> [30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MLEv3</td> <td>[LSA-305.3]</td> <td>2021-NRT</td> </tr>
+  <tr> <td>MLEv3-R</td> <td>[LSA-353]</td> <td>2004-2020</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
 
   
   <tr> <td>MDMET</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/xtAx57TM9qn5X4x" target="_blank">Daily Evapotranspiration</a>
- 
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>DMETv3</td> <td>[LSA-312]</td> <td>2015-NRT</td> </tr>
+  </table> 
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MET</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Evapotranspiration</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Evapotranspiration</a> [30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MET</td> <td>[LSA-311]</td> <td>2019-NRT</td> </tr>
+  </table>
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
   <tr> <td>MH</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Sensible heat flux</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Sensible heat flux</a> [30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MH</td> <td>[LSA-304]</td> <td>2019-NRT</td> </tr>
+  </table> 
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
+
   <tr> <td>MLE</td> <td>
-  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Latent heat flux</a>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/GYmE6w75fPtQwrz" target="_blank">Latent heat flux</a>[30 min]
+  <br>
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>MLE</td> <td>[LSA-305]</td> <td>2019-NRT</td> </tr>
+  </table>   
   </td> <td>MSG</td> <td>HDF5, NETCDF</td> </tr>
   
 
