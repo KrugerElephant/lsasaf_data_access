@@ -186,6 +186,15 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <tr> <td>FRPPixel-R</td> <td>[LSA-550]</td> <td>2004-2015</td> </tr>
   </table>
   </td> <td>MSG, MSG-IODC</td> <td>HDF5</td> </tr>
+
+  <tr> <td>FREM</td> <td>
+  <a href="https://nextcloud.lsasvcs.ipma.pt/s/FarLHEfxKbgnGwQ" target="_blank">Fire Radiative Energy eMissions</a> [hourly/daily]
+  <br> 
+  <table>
+  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
+  <tr> <td>FREM</td> <td>[LSA-507]</td> <td>2004-NRT</td> </tr>
+  </table>
+  </td> <td>MSG</td> <td>NETCDF</td> </tr>
   
   <tr> <td>FRMv2</td> <td>
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/CjtrxjMcYBz5wT7" target="_blank">Fire Risk Map version 2</a> [daily] 
