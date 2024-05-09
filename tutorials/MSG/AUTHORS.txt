@@ -1,0 +1,13 @@
+opyright holder
+copyright: 2024 EUMETSAT
+license: LICENSE.txt
+ 
+# List of development authors
+Vid Primožič (ARSO)
+Ahac Pazla (ARSO)
+Boštjan Muri (ARSO)
+
+# List of contributory authors
+
+# Support
+For all queries on this software package, please contact helpdesk.landsaf@ipma.pt
