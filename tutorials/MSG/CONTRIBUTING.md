@@ -1,47 +1,3 @@
-# LST
-
-## MLST Plot `NetCDF4` data
-This Jupyter Notebook presents opening and plotting LSA SAF MLST products in `NetCDF4` file format. LSA SAF MLST product for the August 21, 2023, is Plotted in Plate-Carree and Robinson geographical projection.
-
-## MLST Data Quality
-This Jupyter Notebook presents the investigation of the LSA SAF MLST product's standard error and quality flag estimates. LSA SAF MLST product standard error and quality flag are plotted for August 21, 2023, in Lambert conformal geostationary projection.
-
-## Description
-Following the template_nb.ipynb is encouraged to be used for further presentations of Jupyter notebooks (NB) in the Eumetsat style.
-Additional refinements are welcome.
-
-## Environment Requirements
-[Jupyter Notebook](https://jupyter.org) is an open-source application that allows you to create documents that include live code, equations, visualizations, and narrative text. Jupyter Notebooks presented here require `Python` as well as [`Jupyter`](https://jupyter.org/) or [`Jupyter-lab`](https://jupyter.org/) and several other `Python` libraries listed in the `Environment.yaml`.
-
-There are multiple ways to achieve this. If no other option is preferred, we suggest the installation of the [conda](https://docs.conda.io/projects/conda/en/stable/index.html), since it works on various platforms (Linux, Windows, macOS). To install conda and set up a virtual environment:
-
-* [1. - Download and install conda](https://docs.conda.io/projects/conda/en/stable/index.html)
-* [2. - Once in `conda` create a virtual environment from the `environment.yaml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
-```
-conda env create -f evnironment_v1.yml
-```
-`Jupyter` is already included in `environment_v1.yaml` so no other actions are needed.
-
-## Usage of the Jupyter Notebooks
-Jupyter notebooks are a set of markdown and code cells. To use them follow the next steps:
-
-* [1. - If using conda activate virtual environment first](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment).
-```
-conda activate environment_v1
-```
-
-* [2. - Run `jupyter notebook` or `jupyter lab`](https://docs.jupyter.org/en/latest/running.html) from the directory with the notebook:
-```
-jupyter notebook <name-of-notebook.ipynb>
-```
-or:
-```
-jupyter-lab
-```
-The `jupyter-lab` offers some additional tools and features for working with notebooks.
-
-* [3. - Basic use of Jupyter Notebooks editor and basic commands is described here](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html).
-
 ## Development
 
 It is suggested to mostly follow the already existing notebooks at [Eumetsat Train Hub](https://catalog.trainhub.eumetsat.int/).
@@ -110,7 +66,7 @@ Inside .pre-commit-config.yaml we specified `nbstripout` that needs to be instal
 conda  install -c conda-forge nbstripout
 ```
 
-After running the commit it will execute tests defined in pre-commit-config.yaml for us i.e nbstripout
+After running the commit it will execute tests defined in pre-commit-config.yaml for us i.e. nbstripout
 If it has to delete the output it modifies the staged file and the user has to add and commit again.
 To ignore the hook `--no-verify` flag is added.
 
@@ -122,11 +78,3 @@ In case of many tests excluding just one can be done with
 ```
 SKIP=nbstripout git commit -m ''
 ```
-
-
-## Authors and Acknowledgment
-ARSO team:
-Vid Primožič,
-Ahac Pazlar,
-Boštjan Muri,
-
