@@ -253,8 +253,8 @@ year/month/day: year with 4 digits, month with 2 digits, day with two digits
   <a href="https://nextcloud.lsasvcs.ipma.pt/s/6D4Q849exZRx3xW" target="_blank">10-day Surface Albedo</a>
   <br> 
   <table>
-  <tr> <td style="text-align: center" colspan="3"> MSG products info </td> </tr>
-  <tr> <td>ETAL</td> <td>[LSA-103]</td> <td>2015-NRT</td> </tr>
+  <tr> <td>ETAL</td> <td>[LSA-103]</td>   <td>2021/07/05-NRT</td> </tr>
+  <tr> <td>ETAL-R</td> <td>[LSA-152]</td> <td>2008-2021/06/25</td> </tr>
   </table>
   </td> <td>EPS</td> <td>HDF5, NETCDF</td> </tr>
   
