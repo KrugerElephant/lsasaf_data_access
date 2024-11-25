@@ -91,6 +91,16 @@ This case studies are split in four groups LST, VEGA, ETP and DSSF:
 > This JN presents a comparison of LSA SAF METREF product estimation for evapotranspiration with estimations obtained using the Penman-Montith formula based on in-situ measurements. Comparison is made for 3 locations in Slovenia with external evapotranspiration estimates provided by ARSO.
 
 
+* DSSF/11_Solar_radiation_chart.ipynb:  
+ **title:** [Calculating the Average MDSSFTD Values and Investigating the Sky Conditions in the First Decade of April 2024](DSSF/11_Solar_radiation_chart.ipynb)
+>
+> This notebook demonstrates the calculation of average DSSF from LSA SAF MDSSFTD product and demonstrates the efect of cloud conditions of the average total DSSF values.
+
+* DSSF/12_Acquisition_time_analysis.ipynb:  
+ **title:** [Comparing LSA SAF METREF Data with Evapotranspiration Estimates Based on In-situ Measurements](DSSF/11_Solar_radiation_chart.ipynb)
+>
+> This Jupyter notebook presents comparison of MDSSFTD with in-situ for 2 locations Payerne in Central Europe and Tamanrasset in North Africa.
+
 
 ## Getting Started
 
@@ -128,7 +138,7 @@ If no other option is preferred, we suggest the installation of the [conda](http
 * [2. - Once in `conda` create a virtual environment from the `environment.yml` file](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 
 ```
-conda env create -f evnironment.yml
+conda env create -f environment.yml
 ```
 `Jupyter` is already included in `environment.yml` so no other actions are needed.
 
