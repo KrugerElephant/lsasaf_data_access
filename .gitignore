@@ -1,2 +1,15 @@
 *checkpoint*
 .venv
+*.csv
+downloads/*
+ecostress*
+csv_data*
+lu_fused_data_for_glm/*
+ecostress_lulc_fused_data_for_glm/*
+ecostress_lulc_temprature_datetime_fused/*
+*.tif
+src/*.tif
+src/*.pkl
+src/*.csv
+*.gpkg
+src/*.gpkg
