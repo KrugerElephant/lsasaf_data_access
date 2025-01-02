@@ -237,3 +237,28 @@ def glm_model(gdf, interaction_formula):
     plt.show()
 
     return gamma_results
+
+
+def concatenate_gpkg_files(input_dir, output_dir):
+    """Concatenate .gpkg files in input directory and save in output directory"""
+
+    # Step 1: List all .gpkg files in the input directory
+    gpkg_files = [f for f in os.listdir(input_dir) if f.endswith('.gpkg')]
+
+    # Step 2: Read each .gpkg file into a GeoDataFrame and store them in a list
+    gdf_list = []
+    for file in gpkg_files:
+        file_path = os.path.join(input_dir, file)
+        gdf = gpd.read_file(file_path)
+        gdf_list.append(gdf)
+
+    # Step 3: Concatenate all GeoDataFrames in the list
+    concatenated_gdf = gpd.GeoDataFrame(pd.concat(gdf_list, ignore_index=True))
+
+    # Step 4: Define the output file path
+    output_file = os.path.join(output_dir, 'concatenated_data.gpkg')
+
+    # Step 5: Save the concatenated GeoDataFrame to a new .gpkg file
+    concatenated_gdf.to_file(output_file, driver='GPKG')
+
+    print(f"Concatenated GeoPackage saved to {output_file}")
