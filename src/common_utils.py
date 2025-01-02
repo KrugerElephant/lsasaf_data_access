@@ -30,6 +30,59 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import patsy
+import rasterio
+from shapely.geometry import Polygon, Point
+from rasterio.mask import mask
+
+
+# Function to create grid
+def create_grid(bbox, size):
+    minx, miny, maxx, maxy = bbox
+    x_coords = np.arange(minx, maxx, size)
+    y_coords = np.arange(miny, maxy, size)
+    polygons = []
+    for x in x_coords:
+        for y in y_coords:
+            polygons.append(Polygon([
+                (x, y), (x + size, y),
+                (x + size, y + size), (x, y + size)
+            ]))
+    return gpd.GeoDataFrame({'geometry': polygons}, crs="EPSG:4326")
+
+
+# Calculate LULC proportions
+def calculate_lulc_proportions(raster_path, points, radius_in_degrees, lulc_remap):
+
+    with rasterio.open(raster_path) as src:
+        results = []
+
+        for point in points:
+            buffer = point.buffer(radius_in_degrees)  # Convert meters to degrees
+            buffered_geometry = [buffer]
+            try:
+                # Mask the raster to the buffer area
+                out_image, out_transform = mask(src, buffered_geometry, crop=True)
+                lulc_vals = out_image.flatten()
+                # lulc_vals = lulc_vals[lulc_vals != 0]  # Remove nodata values
+
+                # Total number of valid pixels in the buffer
+                total_pixels = len(lulc_vals)
+
+                # Initialize proportions dictionary
+                proportions = {key: 0 for key in lulc_remap.values()}
+
+                # Calculate proportion for each LULC code
+                for key, name in lulc_remap.items():
+                    code = int(key.split('_')[1])  # Extract numeric LULC code
+                    code_count = np.sum(lulc_vals == code)  # Count pixels with this code
+                    proportions[name] = code_count/total_pixels if total_pixels > 0 else 0
+
+                results.append(proportions)
+            except Exception as e:
+                # Handle cases where the buffer goes out of bounds or errors occur
+                results.append({key: 0 for key in lulc_remap.values()})
+        return results
+
 
 # Match points and add columns
 def add_landuse_to_gdf(gdf, landuse_profile):

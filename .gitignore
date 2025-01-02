@@ -13,3 +13,4 @@ src/*.pkl
 src/*.csv
 *.gpkg
 src/*.gpkg
+*.pkl
