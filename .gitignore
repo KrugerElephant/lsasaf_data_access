@@ -14,3 +14,4 @@ src/*.csv
 *.gpkg
 src/*.gpkg
 *.pkl
+*.json

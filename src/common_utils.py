@@ -33,6 +33,28 @@ import patsy
 import rasterio
 from shapely.geometry import Polygon, Point
 from rasterio.mask import mask
+from sklearn.metrics import mean_squared_log_error
+import numpy as np
+
+def calculate_rmsle(actual, predicted):
+    """
+    Calculate Root Mean Squared Logarithmic Error (RMSLE) using scikit-learn.
+
+    Parameters:
+        actual (array-like): The actual observed values.
+        predicted (array-like): The predicted values.
+
+    Returns:
+        float: The RMSLE value.
+    """
+    # Ensure the values are positive (to avoid log issues)
+    actual = np.maximum(0, actual)  # Negative values are clipped to 0
+    predicted = np.maximum(0, predicted)  # Negative values are clipped to 0
+
+    # Calculate Mean Squared Logarithmic Error
+    msle = mean_squared_log_error(actual, predicted)
+    rmsle = np.sqrt(msle)
+    return rmsle
 
 
 # Function to create grid
