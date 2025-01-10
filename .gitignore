@@ -15,3 +15,4 @@ src/*.csv
 src/*.gpkg
 *.pkl
 *.json
+*.png
