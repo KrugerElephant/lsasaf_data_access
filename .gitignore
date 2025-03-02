@@ -16,3 +16,8 @@ src/*.gpkg
 *.pkl
 *.json
 *.png
+downloads/*
+*.tiff
+*.tif
+*.html
+*.ts
